@@ -31,7 +31,7 @@ export const projects = [
   {
     title: "Rocket Pizza (Frontend)",
     description:
-      "Aplicación web simulando una pizzería online, enfocada en UI/UX y rendimiento. Implementación de Server-Side Rendering (SSR) y ruteo dinámico con Next.js, junto a un diseño full responsive con Tailwind. contiene un carrito de compras, página de contacto y un blog con artículos sobre pizzas traidas desde una API externa.",
+      "Proyecto en equipo, Rocket Pizza es una aplicación web ficticio desarrollada con Next.js que simula el sitio web de una pizzería. La aplicación permite navegar entre distintas secciones, visualizar productos, realizar pedidos y gestionar un carrito utilizando estado global y persistencia de datos, Además, integra una API externa para mostrar información obtenida dinámicamente desde internet.",
     tags: ["NextJS", "React", "Tailwind"],
     repo: "https://github.com/AleQuiroga26/Rocket-Pizza",
   },
