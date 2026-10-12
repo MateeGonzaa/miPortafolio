@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { profile, links, projects, stack } from "./data";
+import Portrait from "./Portrait";
 
 const nav = [
   ["Sobre mí", "#sobre-mi"],
@@ -60,7 +61,7 @@ function CodeCard() {
       <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-7">
         <code>
           <span className="text-violet">const</span> <span className="text-lilac">mateo</span> = {"{"}
-          {"\n"}  rol: <span className="text-glow">"Software developer"</span>,
+          {"\n"}  rol: <span className="text-glow">"Software Developer"</span>,
           {"\n"}  stack: [<span className="text-glow">"React"</span>, <span className="text-glow">"Tailwind"</span>, <span className="text-glow">"NextJS"</span>],
           {"\n"}  base: <span className="text-glow">"Argentina"</span>,
           {"\n"}  aprendiendo: <span className="text-violet">true</span>,
@@ -111,7 +112,8 @@ function Section({ id, title, children }) {
 function About() {
   return (
     <Section id="sobre-mi" title="Sobre mí">
-      <div className="grid gap-10 md:grid-cols-[1.4fr_1fr]">
+      <div className="grid gap-10 md:grid-cols-[auto_1.4fr_1fr]">
+        <Portrait />
         <div className="max-w-xl space-y-5 leading-relaxed text-mute">
           {profile.about.map((p) => (
             <p key={p}>{p}</p>
@@ -232,7 +234,7 @@ export default function App() {
           <Contact />
         </main>
         <footer className="border-t border-line py-8 text-center text-sm text-mute">
-          © {new Date().getFullYear()} {profile.name}. Hecho con React y Tailwind.
+          © {new Date().getFullYear()} {profile.name}. Portafolio Hecho con React + Vite y Tailwind.
         </footer>
       </div>
     </>

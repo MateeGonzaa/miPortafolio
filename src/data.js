@@ -1,4 +1,3 @@
-// Edita este archivo para actualizar el contenido del portfolio.
 export const profile = {
   name: "Mateo Nicolás González",
   short: "Mateo",
