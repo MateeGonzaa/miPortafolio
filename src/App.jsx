@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { profile, links, projects, stack } from "./data";
 import Portrait from "./Portrait";
 
@@ -24,12 +24,13 @@ function CursorGlow() {
     <div
       ref={ref}
       aria-hidden="true"
-      className="pointer-events-none fixed left-0 top-0 z-0 h-[500px] w-[500px] rounded-full bg-violet/20 blur-[120px] motion-reduce:hidden"
+      className="pointer-events-none fixed left-0 top-0 z-0 h-[500px] w-[500px] rounded-full bg-violet/20 blur-[120px] motion-reduce:hidden [@media(hover:none)]:hidden"
     />
   );
 }
 
 function Header() {
+  const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-30 border-b border-line/70 bg-ink/70 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -43,7 +44,35 @@ function Header() {
             </a>
           ))}
         </nav>
+        <button
+          type="button"
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          aria-controls="menu-movil"
+          aria-label={open ? "Cerrar menú" : "Abrir menú"}
+          className="-mr-2 flex h-10 w-10 flex-col items-center justify-center gap-1.5 sm:hidden"
+        >
+          <span className={`h-0.5 w-5 bg-lilac transition ${open ? "translate-y-1 rotate-45" : ""}`} />
+          <span className={`h-0.5 w-5 bg-lilac transition ${open ? "-translate-y-1 -rotate-45" : ""}`} />
+        </button>
       </div>
+      {open && (
+        <nav id="menu-movil" className="border-t border-line/70 px-6 py-3 sm:hidden">
+          <ul>
+            {nav.map(([label, href]) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  onClick={() => setOpen(false)}
+                  className="block py-3 text-mute transition-colors hover:text-lilac"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
@@ -58,7 +87,7 @@ function CodeCard() {
         <span className="h-3 w-3 rounded-full bg-violet" />
         <span className="ml-3 font-mono text-xs text-mute">Mateo.jsx</span>
       </div>
-      <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-7">
+      <pre className="overflow-hidden whitespace-pre px-3 py-4 font-mono text-[10px] leading-6 min-[380px]:text-[11px] sm:p-5 sm:text-[13px] sm:leading-7">
         <code>
           <span className="text-violet">const</span> <span className="text-lilac">mateo</span> = {"{"}
           {"\n"}  rol: <span className="text-glow">"Software Developer"</span>,
@@ -74,10 +103,10 @@ function CodeCard() {
 
 function Hero() {
   return (
-    <section id="inicio" className="mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-20 md:grid-cols-[1.2fr_1fr] md:pt-32">
+    <section id="inicio" className="mx-auto grid max-w-6xl items-center gap-12 px-6 pb-16 pt-12 sm:pb-24 sm:pt-20 lg:grid-cols-[1.2fr_1fr] lg:gap-14 lg:pt-32">
       <div>
         <p className="font-mono text-sm text-mute">{profile.school}</p>
-        <h1 className="mt-5 text-5xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl">
+        <h1 className="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
           Hola, soy {profile.short}.
           <span className="block bg-gradient-to-r from-violet to-glow bg-clip-text text-transparent">
             Diseño y Programo Aplicaciones y Paginas Web.
@@ -93,7 +122,7 @@ function Hero() {
           </a>
         </div>
       </div>
-      <div className="flex justify-center md:justify-end">
+      <div className="flex justify-start lg:justify-end">
         <CodeCard />
       </div>
     </section>
@@ -102,9 +131,9 @@ function Hero() {
 
 function Section({ id, title, children }) {
   return (
-    <section id={id} className="mx-auto max-w-6xl px-6 py-20">
+    <section id={id} className="mx-auto max-w-6xl px-6 py-14 sm:py-20">
       <h2 className="text-3xl font-semibold tracking-tight text-white">{title}</h2>
-      <div className="mt-10">{children}</div>
+      <div className="mt-8 sm:mt-10">{children}</div>
     </section>
   );
 }
@@ -112,14 +141,14 @@ function Section({ id, title, children }) {
 function About() {
   return (
     <Section id="sobre-mi" title="Sobre mí">
-      <div className="grid gap-10 md:grid-cols-[auto_1.4fr_1fr]">
+      <div className="grid gap-8 md:grid-cols-[auto_1fr] md:gap-10 lg:grid-cols-[auto_1.4fr_1fr]">
         <Portrait />
         <div className="max-w-xl space-y-5 leading-relaxed text-mute">
           {profile.about.map((p) => (
             <p key={p}>{p}</p>
           ))}
         </div>
-        <dl className="space-y-5 border-l border-line pl-8 text-sm">
+        <dl className="space-y-5 border-t border-line pt-8 text-sm md:col-span-2 lg:col-span-1 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
           <div>
             <dt className="text-mute">Ubicación</dt>
             <dd className="mt-1 text-lilac">{profile.location}</dd>
@@ -142,7 +171,7 @@ function About() {
 function ProjectCard({ p }) {
   return (
     <article
-      className={`group flex flex-col rounded-xl border border-line bg-panel p-7 transition-colors hover:border-violet ${
+      className={`group flex flex-col rounded-xl border border-line bg-panel p-5 transition-colors sm:p-7 hover:border-violet ${
         p.featured ? "md:col-span-2" : ""
       }`}
     >
