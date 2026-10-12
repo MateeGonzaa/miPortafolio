@@ -187,6 +187,9 @@ function ProjectCard({ p }) {
       <a href={p.repo} target="_blank" rel="noreferrer" className="mt-6 text-sm text-lilac underline-offset-4 hover:text-glow hover:underline">
         Ver código en GitHub
       </a>
+      <a href={p.web} target="_blank" rel="noreferrer" className="mt-6 text-sm text-lilac underline-offset-4 hover:text-glow hover:underline">
+        Ver Pagina Web
+      </a>
     </article>
   );
 }

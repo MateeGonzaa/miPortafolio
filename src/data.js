@@ -25,7 +25,7 @@ export const projects = [
     description:
       "Proyecto en equipo, un Sistema web e-commerce ficticio de ventas de productos de suplementacion deportiva",
     tags: ["JavaScript", "HTML", "UnoCSS"],
-    proyecto: "https://myl-suplementos-deportivos.vercel.app/",
+    web: "https://myl-suplementos-deportivos.vercel.app/",
     repo: "https://github.com/MateeGonzaa/MyL-Suplementos-Deportivos"
   },
   {
