@@ -33,6 +33,7 @@ export const projects = [
     description:
       "Proyecto en equipo, Rocket Pizza es una aplicación web ficticio desarrollada con Next.js que simula el sitio web de una pizzería. La aplicación permite navegar entre distintas secciones, visualizar productos, realizar pedidos y gestionar un carrito utilizando estado global y persistencia de datos, Además, integra una API externa para mostrar información obtenida dinámicamente desde internet.",
     tags: ["NextJS", "React", "Tailwind"],
+    web: "https://github.com/AleQuiroga26/Rocket-Pizza",
     repo: "https://github.com/AleQuiroga26/Rocket-Pizza",
   },
   {
@@ -40,6 +41,7 @@ export const projects = [
     description:
       "Un sistema web desarrollado con Django que permite administrar la cartelera de un cine, gestionar funciones y realizar la reserva de asientos de manera sencilla e intuitiva.",
     tags: ["Django", "Python", "MySQL", "HTML/CSS"],
+    web: "https://github.com/MateeGonzaa/tp-cine-django",
     repo: "https://github.com/MateeGonzaa/tp-cine-django",
   },
   {
@@ -47,6 +49,7 @@ export const projects = [
     description:
       "El proyecto está dividido en un Frontend (JavaScript/React) y un Backend (API REST con Flask/Python).",
     tags: ["React + Vite", "CSS", "Python", "Flask"],
+    web: "https://github.com/MateeGonzaa/efiJavaScript",
     repo: "https://github.com/MateeGonzaa/efiJavaScript",
   },
   {
@@ -54,6 +57,7 @@ export const projects = [
     description:
       "Trabajo de DevOps donde configuré flujos de integración continua con GitHub Actions.",
     tags: ["JavaScript", "GitHub Actions"],
+    web: "https://github.com/MateeGonzaa/efiDevops",
     repo: "https://github.com/MateeGonzaa/efiDevops",
   },
 ];
