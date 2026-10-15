@@ -12,6 +12,17 @@ export const links = {
 
 export const projects = [
   {
+    title: { es: "DOPARTI", en: "DOPARTI" },
+    featured: true,
+    description: {
+      es: "Proyecto personal, Aplicacion Web/Mobile - DOPARTI - Una app para organizar partidos de distintos deportes entre comunidades formadas por tus amigos y conocidos",
+      en: "Team project: a fictional e-commerce web system for selling sports supplements.",
+    },
+    tags: ["React + Vite", "JavaScript", "HTML", "Tailwind", "SQL"],
+    web: "https://doparti-app.vercel.app/",
+    repo: "https://github.com/MateeGonzaa/DOPARTI-APP",
+  },
+  {
     title: { es: "Tienda de Suplementos Deportivos", en: "Sports Supplements Store" },
     featured: true,
     description: {
