@@ -18,7 +18,7 @@ export const projects = [
       es: "Proyecto personal, Aplicacion Web/Mobile - DOPARTI - Una app para organizar partidos de distintos deportes entre comunidades formadas por tus amigos y conocidos",
       en: "Personal project, Web/Mobile Application - DOPARTI - An application for organizing matches in various sports within communities made up of your friends and acquaintances.",
     },
-    tags: ["React + Vite", "JavaScript", "HTML", "Tailwind", "MySQL"],
+    tags: ["React + Vite", "JavaScript", "HTML", "Tailwind", "PostgreSQL"],
     web: "https://doparti-app.vercel.app/",
     repo: "https://github.com/MateeGonzaa/DOPARTI-APP",
   },
@@ -78,6 +78,6 @@ export const projects = [
 
 export const stack = {
   frontend: ["React", "Next.js", "Tailwind CSS", "JavaScript", "HTML5", "CSS3", "Bootstrap", "UnoCSS"],
-  backend: ["Python", "Flask", "Django", "Node.js", "MySQL"],
+  backend: ["Python", "Flask", "Django", "Node.js", "MySQL", "PostgreSQL"],
   tools: ["Git", "GitHub", "Figma", "Vercel", "npm", "Linux", "Arduino"],
 };
