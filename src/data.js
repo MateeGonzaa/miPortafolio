@@ -16,9 +16,9 @@ export const projects = [
     featured: true,
     description: {
       es: "Proyecto personal, Aplicacion Web/Mobile - DOPARTI - Una app para organizar partidos de distintos deportes entre comunidades formadas por tus amigos y conocidos",
-      en: "Team project: a fictional e-commerce web system for selling sports supplements.",
+      en: "Personal project, Web/Mobile Application - DOPARTI - An application for organizing matches in various sports within communities made up of your friends and acquaintances.",
     },
-    tags: ["React + Vite", "JavaScript", "HTML", "Tailwind", "SQL"],
+    tags: ["React + Vite", "JavaScript", "HTML", "Tailwind", "MySQL"],
     web: "https://doparti-app.vercel.app/",
     repo: "https://github.com/MateeGonzaa/DOPARTI-APP",
   },
