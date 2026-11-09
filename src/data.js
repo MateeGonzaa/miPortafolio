@@ -2,6 +2,7 @@ export const profile = {
   name: "Mateo Nicolás González",
   short: "Mateo",
   location: "Río Cuarto, Córdoba, Argentina",
+  // email: "tu-email@ejemplo.com", // si lo descomentás, aparece el botón "Enviar email"
 };
 
 export const links = {
@@ -9,6 +10,14 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/mateo-nicolas-gonzalez-094b11388/",
   instagram: "https://www.instagram.com/mategonzaleez",
 };
+
+// CV para descargar (archivo en /public)
+export const cv = {
+  href: "/CV-Mateo-Nicolas-Gonzalez.pdf",
+  filename: "CV-Mateo-Nicolas-Gonzalez.pdf",
+};
+
+export const studyingSince = 2024;
 
 export const projects = [
   {
@@ -40,7 +49,6 @@ export const projects = [
       en: "Team project. Rocket Pizza is a fictional web application built with Next.js that simulates a pizzeria's website. It lets users browse sections, view products, place orders and manage a shopping cart using global state and data persistence. It also integrates an external API to display information fetched dynamically from the internet.",
     },
     tags: ["NextJS", "React", "Tailwind"],
-    web: "https://github.com/AleQuiroga26/Rocket-Pizza",
     repo: "https://github.com/AleQuiroga26/Rocket-Pizza",
   },
   {
@@ -50,7 +58,6 @@ export const projects = [
       en: "A web system built with Django to manage a cinema's listings, schedule showtimes and reserve seats in a simple and intuitive way.",
     },
     tags: ["Django", "Python", "MySQL", "HTML/CSS"],
-    web: "https://github.com/MateeGonzaa/tp-cine-django",
     repo: "https://github.com/MateeGonzaa/tp-cine-django",
   },
   {
@@ -60,8 +67,26 @@ export const projects = [
       en: "The project is split into a Frontend (JavaScript/React) and a Backend (REST API with Flask/Python).",
     },
     tags: ["React + Vite", "CSS", "Python", "Flask"],
-    web: "https://github.com/MateeGonzaa/efiJavaScript",
     repo: "https://github.com/MateeGonzaa/efiJavaScript",
+    extra: [{ label: { es: "Backend (Flask)", en: "Backend (Flask)" }, href: "https://github.com/MateeGonzaa/efiPython" }],
+  },
+  {
+    title: { es: "Biblioteca Personal", en: "Personal Library" },
+    description: {
+      es: "Sistema web para gestionar una biblioteca personal de forma digital: registrar libros, ordenarlos, filtrarlos, editarlos, eliminarlos y ver estadísticas generales.",
+      en: "Web system to manage a personal library digitally: add books, sort, filter, edit and delete them, and see general statistics.",
+    },
+    tags: ["JavaScript", "HTML", "CSS"],
+    repo: "https://github.com/MateeGonzaa/practico_evaluativoJS",
+  },
+  {
+    title: { es: "Reto: Bootstrap vs UnoCSS", en: "Challenge: Bootstrap vs UnoCSS" },
+    description: {
+      es: "Reto grupal para trabajar con frameworks CSS: Bootstrap y UnoCSS. Hecho junto a Lucas Aruza.",
+      en: "Group challenge working with CSS frameworks: Bootstrap and UnoCSS. Built together with Lucas Aruza.",
+    },
+    tags: ["HTML", "Bootstrap", "UnoCSS"],
+    repo: "https://github.com/MateeGonzaa/reto04prog2",
   },
   {
     title: { es: "Automatización con GitHub Actions", en: "Automation with GitHub Actions" },
@@ -70,14 +95,45 @@ export const projects = [
       en: "DevOps assignment where I set up continuous integration workflows with GitHub Actions.",
     },
     tags: ["JavaScript", "GitHub Actions"],
-    web: "https://github.com/MateeGonzaa/efiDevops",
     repo: "https://github.com/MateeGonzaa/efiDevops",
   },
 ];
 
+// Íconos desde devicon (CDN). `invert: true` = ícono oscuro que se invierte para verse en fondo negro.
+const di = (name, variant = "original") =>
+  `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${name}/${name}-${variant}.svg`;
 
 export const stack = {
-  frontend: ["React", "Next.js", "Tailwind CSS", "JavaScript", "HTML5", "CSS3", "Bootstrap", "UnoCSS"],
-  backend: ["Python", "Flask", "Django", "Node.js", "MySQL", "PostgreSQL"],
-  tools: ["Git", "GitHub", "Figma", "Vercel", "npm", "Linux", "Arduino"],
+  frontend: [
+    { name: "React", icon: di("react") },
+    { name: "Next.js", icon: di("nextjs"), invert: true },
+    { name: "TypeScript", icon: di("typescript") },
+    { name: "JavaScript", icon: di("javascript") },
+    { name: "HTML5", icon: di("html5") },
+    { name: "CSS3", icon: di("css3") },
+    { name: "Tailwind CSS", icon: di("tailwindcss") },
+    { name: "Bootstrap", icon: di("bootstrap") },
+    { name: "UnoCSS" },
+  ],
+  backend: [
+    { name: "Python", icon: di("python") },
+    { name: "Django", icon: di("django"), invert: true },
+    { name: "Flask", icon: di("flask"), invert: true },
+    { name: "Node.js", icon: di("nodejs") },
+    { name: "MySQL", icon: di("mysql") },
+    { name: "PostgreSQL", icon: di("postgresql") },
+    { name: "Supabase", icon: di("supabase") },
+  ],
+  tools: [
+    { name: "Git", icon: di("git") },
+    { name: "GitHub", icon: di("github"), invert: true },
+    { name: "Docker", icon: di("docker") },
+    { name: "Figma", icon: di("figma") },
+    { name: "Vercel", icon: di("vercel"), invert: true },
+    { name: "Render" },
+    { name: "Thunder Client" },
+    { name: "npm", icon: di("npm") },
+    { name: "Linux", icon: di("linux") },
+    { name: "Arduino", icon: di("arduino") },
+  ],
 };
