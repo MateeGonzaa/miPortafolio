@@ -572,7 +572,7 @@ function ProjectCard({ p, index }) {
         <div className="mt-6 flex flex-wrap gap-2.5">
           <a href={p.repo} target="_blank" rel="noreferrer" className={linkCls}>
             <Icon name="github" className="h-3.5 w-3.5" />
-            {t.viewCode}
+            {p.repoLabel ? p.repoLabel[lang] : t.viewCode}
           </a>
           {p.extra?.map((e) => (
             <a key={e.href} href={e.href} target="_blank" rel="noreferrer" className={linkCls}>

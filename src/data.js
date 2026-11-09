@@ -21,6 +21,19 @@ export const studyingSince = 2024;
 
 export const projects = [
   {
+    title: { es: "La Frikicueva", en: "La Frikicueva" },
+    featured: true,
+    description: {
+      es: "Proyecto en equipo, tienda online full stack de cómics, manga y libros. El frontend en Next.js y TypeScript consume una API REST hecha con Django REST Framework. Incluye catálogo con búsqueda, filtros y paginación, carrito y pedidos, registro e inicio de sesión, panel de gestión para staff y tema claro/oscuro. Frontend desplegado en Vercel y backend en Render con Supabase.",
+      en: "Team project, a full stack online store for comics, manga and books. The Next.js and TypeScript frontend consumes a REST API built with Django REST Framework. It includes a catalog with search, filters and pagination, cart and orders, sign up and login, a staff management panel and light/dark theme. Frontend deployed on Vercel and backend on Render with Supabase.",
+    },
+    tags: ["Next.js", "TypeScript", "Tailwind", "Django REST", "Docker", "Supabase"],
+    web: "https://frikicueva.vercel.app/",
+    repo: "https://github.com/MateeGonzaa/efiProgIII",
+    repoLabel: { es: "Código (Frontend)", en: "Code (Frontend)" },
+    extra: [{ label: { es: "Código (Backend)", en: "Code (Backend)" }, href: "https://github.com/Lucasaruza17/efi_ing" }],
+  },
+  {
     title: { es: "DOPARTI", en: "DOPARTI" },
     featured: true,
     description: {
@@ -69,24 +82,6 @@ export const projects = [
     tags: ["React + Vite", "CSS", "Python", "Flask"],
     repo: "https://github.com/MateeGonzaa/efiJavaScript",
     extra: [{ label: { es: "Backend (Flask)", en: "Backend (Flask)" }, href: "https://github.com/MateeGonzaa/efiPython" }],
-  },
-  {
-    title: { es: "Biblioteca Personal", en: "Personal Library" },
-    description: {
-      es: "Sistema web para gestionar una biblioteca personal de forma digital: registrar libros, ordenarlos, filtrarlos, editarlos, eliminarlos y ver estadísticas generales.",
-      en: "Web system to manage a personal library digitally: add books, sort, filter, edit and delete them, and see general statistics.",
-    },
-    tags: ["JavaScript", "HTML", "CSS"],
-    repo: "https://github.com/MateeGonzaa/practico_evaluativoJS",
-  },
-  {
-    title: { es: "Reto: Bootstrap vs UnoCSS", en: "Challenge: Bootstrap vs UnoCSS" },
-    description: {
-      es: "Reto grupal para trabajar con frameworks CSS: Bootstrap y UnoCSS. Hecho junto a Lucas Aruza.",
-      en: "Group challenge working with CSS frameworks: Bootstrap and UnoCSS. Built together with Lucas Aruza.",
-    },
-    tags: ["HTML", "Bootstrap", "UnoCSS"],
-    repo: "https://github.com/MateeGonzaa/reto04prog2",
   },
   {
     title: { es: "Automatización con GitHub Actions", en: "Automation with GitHub Actions" },
